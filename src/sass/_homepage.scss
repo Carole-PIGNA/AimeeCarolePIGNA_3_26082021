@@ -1,23 +1,33 @@
 /* ajouter animation chargement page:loader*/
 /* à revoir */
 .loader {
+
   position: fixed;
   height: 100%;
   width: 100%;
   left: 0;
   top: 0;
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #3498db; /* Blue */
-  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.90);
+  animation: loader 0.01s;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
   z-index: 10000;
-  animation: spin 3s linear infinite;
-}
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
+  &__item {
+    width: 10rem;
+    height: 10rem;
+    border: 1rem solid #99E2D0; /* Light grey */
+    border-top: 1rem solid #FF79DA; /* Blue */
+    border-bottom: 1rem solid #9356DC;
+    border-right: 1rem solid rgba(211, 212, 206, 0.932);
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+  }
 
+}
 
 /* *********************  */
 
@@ -54,6 +64,7 @@
   
     &__btn {
       @include button(primary);
+      text-decoration: none;
     }
   }
   
@@ -81,6 +92,11 @@
             background-color: #f6f6f6;
             display: flex;
             position: relative;
+
+            &:hover{
+              background-color: #ece4f7;
+
+            }
         
       
         @media (min-width:64rem) {
@@ -124,7 +140,7 @@
 
 }
 
-.restau {
+#restau {
     background-color: #f6f6f6;
     padding: ($sitepadding + 1rem) $sitepadding;
   
@@ -150,7 +166,7 @@
     display: block;
 
     &__img {
-        height: 12rem;
+        height: 15rem;
         width: 100%;
         border: transparent solid 0px;
         border-radius: 1rem 1rem 0 0;
