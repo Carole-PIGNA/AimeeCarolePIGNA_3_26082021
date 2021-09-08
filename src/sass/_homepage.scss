@@ -164,7 +164,13 @@
     text-decoration: none;
     color: inherit;
     display: block;
-
+     transition:0,7s;
+        &:hover{
+         
+          transform:scale(1.05);
+         
+        }
+ 
     &__img {
         height: 15rem;
         width: 100%;
@@ -172,7 +178,8 @@
         border-radius: 1rem 1rem 0 0;
         box-shadow: none;
         object-fit: cover;
-      }
+    }
+        
     &__badge {
         background-color: $color-tertiary;
         color: darken($color-tertiary, 50%);
@@ -212,7 +219,9 @@
       }
     
     &__like {
-        background-color: white!important;
+       background-color: white!important; 
+       border-color: white;
+        
         
       }
 
