@@ -14,13 +14,17 @@
   justify-content : center;
   }
   .loader__item {
+    /* taille du loader */
   width : 10rem;
   height : 10rem;
-  border : #99e2d0 solid 1rem;
+  /* couleurs du loader */
+  border : #99e2d0 solid 1rem; 
   border-top : 1rem solid #ff79da;
   border-bottom : 1rem solid #9356dc;
   border-right : 1rem solid rgb(211, 212, 206, 0.932);
-  border-radius : 50%;
+  /* transformation du loader en cercle */
+  border-radius : 50%; 
+  /* le loader tourne infiniment pendant 2s*/
   animation : spin 2s linear infinite;
   }
   .location {
@@ -57,7 +61,7 @@
   border-radius : 100px;
   color : white;
   background-color : #686868;
-  background-image : linear-gradient(#9356DC, #FF79DA);
+  background-image : linear-gradient(#9356DC, #FF79DA);/* couleur dégradée */
   cursor : pointer;
   transition-duration : 0.25s;
   box-shadow : 0.25rem 0.25rem 10px rgb(0, 0, 0, 0.25);
@@ -65,9 +69,9 @@
   }
   .invit__btn:hover {
   background-color : white;
-  box-shadow : 0.25rem 0.25rem 10px rgb(0, 0, 0, 0.50);
+  box-shadow : 0.25rem 0.25rem 10px rgb(0, 0, 0, 0.50); /* au survol de la souris une ombre apparaît*/
   }
-  .invit__btn a {
+  .invit__btn a { 
   text-decoration : none;
   color : inherit;
   }
@@ -81,7 +85,8 @@
   margin : 0;
   padding : 0;
   list-style : none;
-  counter-reset : accountlist;
+  counter-reset : accountlist; /* réinitialise le compteur avec la valeur accountlist
+  accountlist dont la valeur de base est 1 et qui est incrémenté de 1*/
   }
   @media (min-width: 64rem) {
   .howto__steps {
@@ -117,8 +122,8 @@
   margin-bottom : 0;
   }
   .howto__step::before {
-  counter-increment : accountlist 1;
-  content : counter(accountlist) " ";
+  counter-increment : accountlist 1; /* on incrémente accountlist de 1*/
+  content : counter(accountlist) " "; /* renvoie une chaîne de caractère (ici le contenu de accountlist)*/
   background : #9356dc;
   height : 1.5rem;
   width : 1.5rem;
@@ -140,13 +145,15 @@
   }
   .cards {
   display : grid;
-  grid-template-columns : repeat(1,1fr);
+  grid-template-columns : repeat(1,1fr); /* cartes organisées en 1 seule colonne */
   column-gap : 2rem;
   row-gap : 2rem;
   }
   @media (min-width: 64rem) {
   .cards {
   grid-template-columns : repeat(2,1fr);
+  /* spécifie le nbre et la largeur des colonnes:
+  chaque colonne prend 1 fraction de l'espace qui reste */
   }
   }
   .card {
@@ -159,9 +166,9 @@
   transition : 1s;
   }
   .card:hover {
-  transform : scale(1.05);
+  transform : scale(1.05); /* petit zoom sur la carte au survol de la souris*/
   }
-  .card__img {
+  .card__img { /* dimensionnement des images*/
   height : 15rem;
   width : 100%;
   border : transparent;
@@ -174,7 +181,7 @@
   color : #1b6150;
   padding : 0.5rem;
   border-radius : 0.125rem;
-  position : absolute;
+  position : absolute; /* positionné par rapport à son ancêtre(et aucun espace n'est créé pour lui sur la page)*/
   top : 1rem;
   right : 0.75rem;
   }
@@ -205,5 +212,5 @@
   justify-content : center;
   }
   .card__like {
-  background-color : white !important ;
+  background-color : white !important ; /*remplace les autres déclarations */
   }

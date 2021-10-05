@@ -1,4 +1,4 @@
-@keyframes itemAppear {
+@keyframes itemAppear { /*apparition progressive de l'elt du menu */
     0% {
       transform: scale(0)
     }
@@ -9,13 +9,14 @@
 
   @keyframes loader {
     100% {
-      opacity: 0;
-      z-index: -10;
+      opacity: 0; /* complètement transparent*/
+      z-index: -10; /* position de la couche loader sur la page accueil  */
     }
   }
   
   @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    /*liste d'étapes : de 0% à 100%*/
+    0% { transform: rotate(0deg); } /* état initial */
+    100% { transform: rotate(360deg); } /*état final*/
   } 
   
