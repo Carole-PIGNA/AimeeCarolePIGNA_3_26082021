@@ -69,6 +69,7 @@
   }
   .invit__btn:hover {
   background-color : white;
+  filter:brightness(110%);
   box-shadow : 0.25rem 0.25rem 10px rgb(0, 0, 0, 0.50); /* au survol de la souris une ombre apparaît*/
   }
   .invit__btn a { 
@@ -139,6 +140,10 @@
   margin-right : 1rem;
   color : #7e7e7e;
   }
+  .howto__step:hover .howto__icon{
+    color:#9356dc;
+  }
+
   #restau {
   background-color : #f6f6f6;
   padding : 2rem 1rem;
@@ -204,8 +209,9 @@
   .card__btn {
   height : 2rem;
   width : 2rem;
-  background-color : transparent;
-  border : transparent solid 0;
+  border: none;
+  outline: none;
+  background: none;
   padding : 0;
   display : flex;
   align-items : center;
@@ -213,4 +219,5 @@
   }
   .card__like {
   background-color : white !important ; /*remplace les autres déclarations */
-  }
+  
+}
