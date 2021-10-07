@@ -39,8 +39,9 @@
   .menu__btn {
   height : 2rem;
   width : 2rem;
-  background-color : transparent;
-  border : transparent solid 0;
+  border: none;
+  outline: none;
+  background: none;
   padding : 0;
   display : flex;
   align-items : center;
@@ -49,6 +50,10 @@
   position : relative;
   background-color : black;
   }
+/*
+  .menu__btn:focus{
+    outline: none;
+  }*/
   .menu__btn:hover::before {
   opacity : 1;
   }
@@ -117,7 +122,7 @@
   box-shadow : 0.25rem 0.25rem 1rem rgb(0, 0, 0, 0.1);
   overflow : hidden;
   cursor : pointer;
-  animation : itemAppear 0.6s; /*apparition progressive d'1 élts en 0.6s*/
+  animation : itemAppear 1s; /*apparition progressive d'1 élts en 0.6s*/
   animation-timing-function : cubic-bezier(0.5,1.58,0.34,0.82);/*la vitesse de transition augmente au milieu*/
   animation-fill-mode : both; /*règles de forward et backward appliquées */
   transform : scale(0);
@@ -230,6 +235,7 @@
   }
   .commandBtn:hover {
   background-color : white;
+  filter:brightness(110%);
   box-shadow : 0.25rem 0.25rem 10px rgb(0, 0, 0, 0.50);
   }
   .commandBtn a {

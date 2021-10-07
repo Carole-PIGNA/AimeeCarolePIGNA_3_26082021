@@ -1,11 +1,19 @@
 @keyframes itemAppear { /*apparition progressive de l'elt du menu */
+   
     0% {
-      transform: scale(0)
+      opacity:0;
+      transform:translateY(10px) ;
+      
     }
+
+   
     100% {
-      transform: scale(1);
+      opacity:1;
+      transform:translateY(0px);
+      
     }
   }
+
 
   @keyframes loader {
     100% {
