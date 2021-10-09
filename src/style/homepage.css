@@ -209,15 +209,13 @@
   .card__btn {
   height : 2rem;
   width : 2rem;
-  border: none;
-  outline: none;
-  background: none;
   padding : 0;
   display : flex;
   align-items : center;
   justify-content : center;
   }
   .card__like {
+  
   background-color : white !important ; /*remplace les autres déclarations */
   
 }

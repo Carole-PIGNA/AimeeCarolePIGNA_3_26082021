@@ -38,24 +38,21 @@
   }
   .menu__btn {
   height : 2rem;
-  width : 2rem;
-  border: none;
-  outline: none;
-  background: none;
+  width : 5rem;
+  border:none;
   padding : 0;
   display : flex;
   align-items : center;
   justify-content : center;
   cursor : pointer;
   position : relative;
-  background-color : black;
+  background:radial-gradient(ellipse closest-side, black 90%,transparent );  /* application d'un background 
+  en forme d'ellipse noir pour cacher les bordures du bouton*/
   }
-/*
-  .menu__btn:focus{
-    outline: none;
-  }*/
+
   .menu__btn:hover::before {
   opacity : 1;
+
   }
   .menu__btn::before {
   opacity : 0;
@@ -66,8 +63,13 @@
   left : 0;
   height : 100%;
   width : 100%;
-  background : linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  background : linear-gradient( #9356dc, #ff79da);
+  background-size: 35px 29px; /* background appliquée uniquement pour le coeur*/
+  background-repeat: no-repeat;
+  background-position: center;
   }
+
+
   .menu__like {
   transition-duration : 0.25s;
   background-color : #f6f6f6;
@@ -83,6 +85,7 @@
   }
   .menu__btn:hover .menu__like--noBg {
   opacity : 0;
+  border:none;
   }
   .allmenus {
   display : grid;
@@ -222,6 +225,7 @@
   .commandBtn {
   border : 0;
   padding : 0.75rem 1.5rem;
+  font-family : 'Roboto', sans-serif;
   font-weight : 500;
   font-size : 1.1rem;
   border-radius : 100px;
@@ -239,6 +243,7 @@
   box-shadow : 0.25rem 0.25rem 10px rgb(0, 0, 0, 0.50);
   }
   .commandBtn a {
+
   text-decoration : none;
   color : inherit;
   }
